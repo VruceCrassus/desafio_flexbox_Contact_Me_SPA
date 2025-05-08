@@ -1,0 +1,89 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+/* creo el contenedor de pagina dividiendo en sidebar y lobby */
+  .flex-container {
+    display: flex;
+    height: 100vh;
+  }
+/* contenedor sidebar donde irán todos los contactos */
+  .sidebar {
+    flex-grow: 1; /* doy un espacio de 1:3 con relación al otro contenedor que comparte el contenedor padre */
+    border-right: 1px solid #ccc; /* doy borde visible a la derecha de la barra de contactos  */
+    overflow-y: auto;  /* agrego barra de desplazamiento solo si es necesario */
+    background-color: #f8f9fa;
+  }
+#principal, .icon i{
+    /* margin-left: auto; */ /* esto empuja el contenedor a la derecha */
+    justify-content: space-between;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#principal p{
+    margin-right: auto;
+}
+
+  .chat {
+ /* doy espacio entre el boton y el contenedor */
+    text-align: center; /* alineo texto horizontalmente */
+    color: white; /* color de texto */
+    cursor: pointer; /* cambio forma del mouse cuando paso por el boton */
+    border-bottom: 1px solid #ddd;
+  }
+  .chat p{
+    color: white;
+    background-color: #a491d2;
+    padding: 1rem; /* agrando boton */
+    margin: 10%;
+  }
+
+  .chat p:hover {
+    background-color: #CDC3E6; /* cambia a este color cuano el mouse pasa sobre el boton */
+  }
+
+  .contact-cell {
+    display: flex;
+    align-items: center;
+    margin: 2px; 
+    gap: 1rem;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    margin-bottom: 0px;
+    padding: 0 1rem 0 1rem;
+}
+.text-contact p{
+    margin-bottom: 0px;
+}
+
+  .contact-cell img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+
+  .lobby {
+    flex-grow: 3; /* doy un espacio de 3:1 con relación al otro contenedor que comparte el contenedor padre */
+    display: flex; /* despliego contenido horizontal */
+    flex-direction: column; /* alineo los contenidos de la clase de forma vertical como columna en el contenedor*/
+    justify-content: center; /* alineo el contenido verticalmente en el eje Y */
+    align-items: center; /* alineo el contenido horizontalmente en el eje x */
+    text-align: center; /* centro el contenido en eje X */
+    background-color: #E8EBE4;
+  }
+
+  .lobby img{
+    height: 30%;
+    width: 25%;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+  }
+
